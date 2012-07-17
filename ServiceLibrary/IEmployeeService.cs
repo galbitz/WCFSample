@@ -9,6 +9,9 @@ namespace ServiceLibrary
     [ServiceContract]
     public interface IEmployeeService
     {
+        [OperationContract]
+        string Echo();
+
         [OperationContract, FaultContract(typeof(ErrorData))]
         Employee GetEmployee(int id);
 

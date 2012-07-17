@@ -27,5 +27,12 @@ namespace ServiceLibrary
         {
             throw new Exception("Unexpected error");
         }
+
+        public string Echo()
+        {
+            return "Hello World";
+        }
+
+
     }
 }

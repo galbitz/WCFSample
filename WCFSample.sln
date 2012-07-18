@@ -8,6 +8,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceClient", "ServiceCli
 		{1DEE495F-3BE3-4B9E-9FEC-F69A1AF9ECB5} = {1DEE495F-3BE3-4B9E-9FEC-F69A1AF9ECB5}
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClearUsernameBinding", "ClearUserPassBinding\ClearUsernameBinding.csproj", "{D2BC4C2B-591E-4489-9515-0075112F73B0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -38,6 +40,16 @@ Global
 		{F394B122-D256-4289-9F47-C9BF3CBC7262}.Release|Mixed Platforms.Build.0 = Release|x86
 		{F394B122-D256-4289-9F47-C9BF3CBC7262}.Release|x86.ActiveCfg = Release|x86
 		{F394B122-D256-4289-9F47-C9BF3CBC7262}.Release|x86.Build.0 = Release|x86
+		{D2BC4C2B-591E-4489-9515-0075112F73B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2BC4C2B-591E-4489-9515-0075112F73B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2BC4C2B-591E-4489-9515-0075112F73B0}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{D2BC4C2B-591E-4489-9515-0075112F73B0}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{D2BC4C2B-591E-4489-9515-0075112F73B0}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{D2BC4C2B-591E-4489-9515-0075112F73B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2BC4C2B-591E-4489-9515-0075112F73B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2BC4C2B-591E-4489-9515-0075112F73B0}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{D2BC4C2B-591E-4489-9515-0075112F73B0}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{D2BC4C2B-591E-4489-9515-0075112F73B0}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

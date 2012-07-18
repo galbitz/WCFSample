@@ -3,223 +3,7 @@
   <wsp:Policy wsu:Id="WSHttpBinding_IEmployeeService_policy">
     <wsp:ExactlyOne>
       <wsp:All>
-        <sp:SymmetricBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
-          <wsp:Policy>
-            <sp:ProtectionToken>
-              <wsp:Policy>
-                <mssp:SslContextToken sp:IncludeToken="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient" xmlns:mssp="http://schemas.microsoft.com/ws/2005/07/securitypolicy">
-                  <wsp:Policy>
-                    <sp:RequireDerivedKeys/>
-                  </wsp:Policy>
-                </mssp:SslContextToken>
-              </wsp:Policy>
-            </sp:ProtectionToken>
-            <sp:AlgorithmSuite>
-              <wsp:Policy>
-                <sp:Basic256/>
-              </wsp:Policy>
-            </sp:AlgorithmSuite>
-            <sp:Layout>
-              <wsp:Policy>
-                <sp:Strict/>
-              </wsp:Policy>
-            </sp:Layout>
-            <sp:IncludeTimestamp/>
-            <sp:EncryptSignature/>
-            <sp:OnlySignEntireHeadersAndBody/>
-          </wsp:Policy>
-        </sp:SymmetricBinding>
-        <sp:SignedSupportingTokens xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
-          <wsp:Policy>
-            <sp:UsernameToken sp:IncludeToken="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient">
-              <wsp:Policy>
-                <sp:WssUsernameToken10/>
-              </wsp:Policy>
-            </sp:UsernameToken>
-          </wsp:Policy>
-        </sp:SignedSupportingTokens>
-        <sp:Wss11 xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
-          <wsp:Policy/>
-        </sp:Wss11>
-        <sp:Trust10 xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
-          <wsp:Policy>
-            <sp:MustSupportIssuedTokens/>
-            <sp:RequireClientEntropy/>
-            <sp:RequireServerEntropy/>
-          </wsp:Policy>
-        </sp:Trust10>
         <wsaw:UsingAddressing/>
-      </wsp:All>
-    </wsp:ExactlyOne>
-  </wsp:Policy>
-  <wsp:Policy wsu:Id="WSHttpBinding_IEmployeeService_GetEmployee_Input_policy">
-    <wsp:ExactlyOne>
-      <wsp:All>
-        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
-          <sp:Body/>
-          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing"/>
-          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing"/>
-          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing"/>
-          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing"/>
-          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing"/>
-          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing"/>
-          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing"/>
-        </sp:SignedParts>
-        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
-          <sp:Body/>
-        </sp:EncryptedParts>
-      </wsp:All>
-    </wsp:ExactlyOne>
-  </wsp:Policy>
-  <wsp:Policy wsu:Id="WSHttpBinding_IEmployeeService_GetEmployee_output_policy">
-    <wsp:ExactlyOne>
-      <wsp:All>
-        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
-          <sp:Body/>
-          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing"/>
-          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing"/>
-          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing"/>
-          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing"/>
-          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing"/>
-          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing"/>
-          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing"/>
-        </sp:SignedParts>
-        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
-          <sp:Body/>
-        </sp:EncryptedParts>
-      </wsp:All>
-    </wsp:ExactlyOne>
-  </wsp:Policy>
-  <wsp:Policy wsu:Id="WSHttpBinding_IEmployeeService_GetEmployee_ErrorDataFault_Fault">
-    <wsp:ExactlyOne>
-      <wsp:All>
-        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
-          <sp:Body/>
-          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing"/>
-          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing"/>
-          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing"/>
-          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing"/>
-          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing"/>
-          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing"/>
-          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing"/>
-        </sp:SignedParts>
-        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
-          <sp:Body/>
-        </sp:EncryptedParts>
-      </wsp:All>
-    </wsp:ExactlyOne>
-  </wsp:Policy>
-  <wsp:Policy wsu:Id="WSHttpBinding_IEmployeeService_MethodThatFails_Input_policy">
-    <wsp:ExactlyOne>
-      <wsp:All>
-        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
-          <sp:Body/>
-          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing"/>
-          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing"/>
-          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing"/>
-          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing"/>
-          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing"/>
-          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing"/>
-          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing"/>
-        </sp:SignedParts>
-        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
-          <sp:Body/>
-        </sp:EncryptedParts>
-      </wsp:All>
-    </wsp:ExactlyOne>
-  </wsp:Policy>
-  <wsp:Policy wsu:Id="WSHttpBinding_IEmployeeService_MethodThatFails_output_policy">
-    <wsp:ExactlyOne>
-      <wsp:All>
-        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
-          <sp:Body/>
-          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing"/>
-          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing"/>
-          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing"/>
-          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing"/>
-          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing"/>
-          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing"/>
-          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing"/>
-        </sp:SignedParts>
-        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
-          <sp:Body/>
-        </sp:EncryptedParts>
-      </wsp:All>
-    </wsp:ExactlyOne>
-  </wsp:Policy>
-  <wsp:Policy wsu:Id="WSHttpBinding_IEmployeeService_MethodThatFails_ErrorDataFault_Fault">
-    <wsp:ExactlyOne>
-      <wsp:All>
-        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
-          <sp:Body/>
-          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing"/>
-          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing"/>
-          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing"/>
-          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing"/>
-          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing"/>
-          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing"/>
-          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing"/>
-        </sp:SignedParts>
-        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
-          <sp:Body/>
-        </sp:EncryptedParts>
-      </wsp:All>
-    </wsp:ExactlyOne>
-  </wsp:Policy>
-  <wsp:Policy wsu:Id="WSHttpBinding_IEmployeeService_MethodFailsUnexpected_Input_policy">
-    <wsp:ExactlyOne>
-      <wsp:All>
-        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
-          <sp:Body/>
-          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing"/>
-          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing"/>
-          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing"/>
-          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing"/>
-          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing"/>
-          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing"/>
-          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing"/>
-        </sp:SignedParts>
-        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
-          <sp:Body/>
-        </sp:EncryptedParts>
-      </wsp:All>
-    </wsp:ExactlyOne>
-  </wsp:Policy>
-  <wsp:Policy wsu:Id="WSHttpBinding_IEmployeeService_MethodFailsUnexpected_output_policy">
-    <wsp:ExactlyOne>
-      <wsp:All>
-        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
-          <sp:Body/>
-          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing"/>
-          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing"/>
-          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing"/>
-          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing"/>
-          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing"/>
-          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing"/>
-          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing"/>
-        </sp:SignedParts>
-        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
-          <sp:Body/>
-        </sp:EncryptedParts>
-      </wsp:All>
-    </wsp:ExactlyOne>
-  </wsp:Policy>
-  <wsp:Policy wsu:Id="WSHttpBinding_IEmployeeService_MethodFailsUnexpected_ErrorDataFault_Fault">
-    <wsp:ExactlyOne>
-      <wsp:All>
-        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
-          <sp:Body/>
-          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing"/>
-          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing"/>
-          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing"/>
-          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing"/>
-          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing"/>
-          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing"/>
-          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing"/>
-        </sp:SignedParts>
-        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
-          <sp:Body/>
-        </sp:EncryptedParts>
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
@@ -280,45 +64,36 @@
     <wsdl:operation name="GetEmployee">
       <soap12:operation soapAction="http://tempuri.org/IEmployeeService/GetEmployee" style="document"/>
       <wsdl:input>
-        <wsp:PolicyReference URI="#WSHttpBinding_IEmployeeService_GetEmployee_Input_policy"/>
         <soap12:body use="literal"/>
       </wsdl:input>
       <wsdl:output>
-        <wsp:PolicyReference URI="#WSHttpBinding_IEmployeeService_GetEmployee_output_policy"/>
         <soap12:body use="literal"/>
       </wsdl:output>
       <wsdl:fault name="ErrorDataFault">
-        <wsp:PolicyReference URI="#WSHttpBinding_IEmployeeService_GetEmployee_ErrorDataFault_Fault"/>
         <soap12:fault name="ErrorDataFault" use="literal"/>
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="MethodThatFails">
       <soap12:operation soapAction="http://tempuri.org/IEmployeeService/MethodThatFails" style="document"/>
       <wsdl:input>
-        <wsp:PolicyReference URI="#WSHttpBinding_IEmployeeService_MethodThatFails_Input_policy"/>
         <soap12:body use="literal"/>
       </wsdl:input>
       <wsdl:output>
-        <wsp:PolicyReference URI="#WSHttpBinding_IEmployeeService_MethodThatFails_output_policy"/>
         <soap12:body use="literal"/>
       </wsdl:output>
       <wsdl:fault name="ErrorDataFault">
-        <wsp:PolicyReference URI="#WSHttpBinding_IEmployeeService_MethodThatFails_ErrorDataFault_Fault"/>
         <soap12:fault name="ErrorDataFault" use="literal"/>
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="MethodFailsUnexpected">
       <soap12:operation soapAction="http://tempuri.org/IEmployeeService/MethodFailsUnexpected" style="document"/>
       <wsdl:input>
-        <wsp:PolicyReference URI="#WSHttpBinding_IEmployeeService_MethodFailsUnexpected_Input_policy"/>
         <soap12:body use="literal"/>
       </wsdl:input>
       <wsdl:output>
-        <wsp:PolicyReference URI="#WSHttpBinding_IEmployeeService_MethodFailsUnexpected_output_policy"/>
         <soap12:body use="literal"/>
       </wsdl:output>
       <wsdl:fault name="ErrorDataFault">
-        <wsp:PolicyReference URI="#WSHttpBinding_IEmployeeService_MethodFailsUnexpected_ErrorDataFault_Fault"/>
         <soap12:fault name="ErrorDataFault" use="literal"/>
       </wsdl:fault>
     </wsdl:operation>
@@ -426,7 +201,7 @@
   <xs:attribute name="FactoryType" type="xs:QName"/>
   <xs:attribute name="Id" type="xs:ID"/>
   <xs:attribute name="Ref" type="xs:IDREF"/>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:8732/Design_Time_Addresses/ServiceLibrary/Service1/</con:endpoint></con:endpoints><con:operation isOneWay="false" action="http://tempuri.org/IEmployeeService/GetEmployee" name="GetEmployee" bindingOperationName="GetEmployee" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1" useWsAddressing="true" wssPasswordType="PasswordText"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8732/Design_Time_Addresses/ServiceLibrary/Service1/</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:tem="http://tempuri.org/">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:8732/Design_Time_Addresses/ServiceLibrary/Service1/</con:endpoint></con:endpoints><con:operation isOneWay="false" action="http://tempuri.org/IEmployeeService/GetEmployee" name="GetEmployee" bindingOperationName="GetEmployee" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1" useWsAddressing="true"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8732/Design_Time_Addresses/ServiceLibrary/Service1/</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:tem="http://tempuri.org/">
    <soap:Header/>
    <soap:Body>
       <tem:GetEmployee>
@@ -434,7 +209,7 @@
          <tem:id>1</tem:id>
       </tem:GetEmployee>
    </soap:Body>
-</soap:Envelope>]]></con:request><con:credentials><con:username>Sheldon</con:username><con:password>Hari</con:password><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IEmployeeService/GetEmployee" addDefaultAction="true" addDefaultTo="true"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation isOneWay="false" action="http://tempuri.org/IEmployeeService/MethodThatFails" name="MethodThatFails" bindingOperationName="MethodThatFails" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1" useWsAddressing="true"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8732/Design_Time_Addresses/ServiceLibrary/Service1/</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:tem="http://tempuri.org/">
+</soap:Envelope>]]></con:request><con:credentials><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IEmployeeService/GetEmployee" addDefaultAction="true" addDefaultTo="true"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation isOneWay="false" action="http://tempuri.org/IEmployeeService/MethodThatFails" name="MethodThatFails" bindingOperationName="MethodThatFails" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1" useWsAddressing="true"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8732/Design_Time_Addresses/ServiceLibrary/Service1/</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:tem="http://tempuri.org/">
    <soap:Header/>
    <soap:Body>
       <tem:MethodThatFails/>
@@ -444,4 +219,4 @@
    <soap:Body>
       <tem:MethodFailsUnexpected/>
    </soap:Body>
-</soap:Envelope>]]></con:request><con:credentials><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IEmployeeService/MethodFailsUnexpected" addDefaultAction="true" addDefaultTo="true"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:sensitiveInformation/></con:soapui-project>
+</soap:Envelope>]]></con:request><con:credentials><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IEmployeeService/MethodFailsUnexpected" addDefaultAction="true" addDefaultTo="true"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/></con:soapui-project>
